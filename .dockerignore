@@ -1,0 +1,10 @@
+# Unikraft Config
+/Makefile.uk
+/.unikraft/
+/.config*
+
+# Node Config
+/node_modules
+npm-debug.log
+.env
+.DS_Store
