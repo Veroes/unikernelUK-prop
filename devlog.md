@@ -15,3 +15,14 @@
 **Note**: - \
 
 ## 2024-10-27
+
+**Objective**: Implement Unikraft to exisiting app, build into an unikernel \
+**Task**:
+
+- Do `Kraftfile` and read docs
+- Do `Dockerfile` and read docs
+- Build the Unikernel
+- Fix the process if there's any problem
+
+**Next Steps**: - \
+**Note**: - \
