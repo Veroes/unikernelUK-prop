@@ -14,7 +14,7 @@
 **Next Steps**: Implement Unikraft to exisiting app \
 **Note**: - \
 
-## 2024-10-27
+## 2024-10-29
 
 **Objective**: Implement Unikraft to exisiting app, build into an unikernel \
 **Task**:
@@ -24,5 +24,5 @@
 - Build the Unikernel
 - Fix the process if there's any problem
 
-**Next Steps**: - \
-**Note**: - \
+**Next Steps**: Add Notes and Comments for Readers | Find Benchmarking for Unikernel \
+**Note**: There is a problem on downloading on `ca-certifactes` and `tzdata`, sometimes it work and don't. I add some retry 3 times to handle this issue. | Hope it ain't gonna take while :) to find the Benchmark
