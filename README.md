@@ -1,5 +1,9 @@
 # Unikraft's Unikernel for Final Project
 
+## Run Buildkit Container
+
+`docker run -d --privileged --name buildkitd moby/buildkit:latest`
+
 ## Build Unikernel
 
 `kraft build --no-cache --no-update --plat qemu --arch x86_64`
