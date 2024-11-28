@@ -13,7 +13,7 @@ RUN set -xe; \
     mkdir -p /target/etc; \
     mkdir -p /blank; \
     for i in 1 2 3; do \
-      apk --no-cache add ca-certificates tzdata && break || sleep 5; \
+        apk --no-cache add ca-certificates tzdata && break || sleep 5; \
     done; \
     update-ca-certificates; \
     ln -sf ../usr/share/zoneinfo/Etc/UTC /target/etc/localtime; \
@@ -21,10 +21,10 @@ RUN set -xe; \
 
 FROM scratch
 
-COPY --from=sys /target/etc /etc
-COPY --from=sys /usr/share/zoneinfo/Etc/UTC /usr/share/zoneinfo/Etc/UTC
-COPY --from=sys /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
-COPY --from=sys /blank /tmp
+#COPY --from=sys /target/etc /etc
+#COPY --from=sys /usr/share/zoneinfo/Etc/UTC /usr/share/zoneinfo/Etc/UTC
+#COPY --from=sys /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+#COPY --from=sys /blank /tmp
 
 COPY --from=node /usr/local/bin/node /usr/bin/node
 
