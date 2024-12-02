@@ -11,3 +11,6 @@ npm-debug.log
 
 # Others
 /image
+/dist
+.gitignore
+README.md
