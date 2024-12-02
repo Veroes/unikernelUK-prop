@@ -7,6 +7,18 @@ RUN npm install
 
 COPY . .
 
+FROM alpine:3 AS sys
+
+RUN set -xe; \
+    mkdir -p /target/etc; \
+    mkdir -p /blank; \
+    for i in 1 2 3; do \
+        apk --no-cache add ca-certificates tzdata && break || sleep 5; \
+    done; \
+    update-ca-certificates; \
+    ln -sf ../usr/share/zoneinfo/Etc/UTC /target/etc/localtime; \
+    echo "Etc/UTC" > /target/etc/timezone;
+
 FROM scratch
 
 # Node Binary
